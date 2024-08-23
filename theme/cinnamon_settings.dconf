@@ -1,0 +1,116 @@
+[/]
+alttab-switcher-delay=100
+command-history=['echo DEPRECATED']
+desklet-snap-interval=25
+desktop-effects-minimize='fade'
+enabled-applets=['panel1:center:0:grouped-window-list@cinnamon.org:2', 'panel1:right:2:systray@cinnamon.org:3', 'panel2:right:8:xapp-status@cinnamon.org:4', 'panel2:right:7:removable-drives@cinnamon.org:7', 'panel2:right:11:network@cinnamon.org:10', 'panel2:right:3:power@cinnamon.org:12', 'panel2:right:12:calendar@cinnamon.org:13', 'panel1:right:7:cornerbar@cinnamon.org:14', 'panel2:right:2:sound150@claudiux:22', 'panel2:right:1:notifications@cinnamon.org:23', 'panel2:left:0:Cinnamenu@json:24']
+enabled-desklets=@as []
+enabled-extensions=['transparent-panels@germanfr']
+favorite-apps=['firefox.desktop', 'com.brave.Browser.desktop:flatpak', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'nemo.desktop', 'thunderbird.desktop', 'org.gnome.Terminal.desktop', 'org.telegram.desktop.desktop:flatpak', 'io.freetubeapp.FreeTube.desktop:flatpak']
+next-applet-id=25
+next-desklet-id=1
+no-adjacent-panel-barriers=false
+panel-edit-mode=false
+panel-launchers=['DEPRECATED']
+panel-zone-icon-sizes='[{"panelId": 1, "left": 0, "center": 0, "right": 24}, {"left": 0, "center": 0, "right": 16, "panelId": 2}]'
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}, {"left": 28, "center": 28, "right": 16, "panelId": 2}]'
+panel-zone-text-sizes='[{"panelId":1,"left":0,"center":0,"right":0},{"left":0,"center":0,"right":0,"panelId":2}]'
+panels-autohide=['1:intel', '2:false']
+panels-enabled=['1:0:bottom', '2:0:top']
+panels-height=['1:40', '2:40']
+panels-hide-delay=['1:0', '2:0']
+panels-show-delay=['1:0', '2:0']
+show-media-keys-osd='small'
+window-effect-speed=1
+
+[cinnamon-session]
+quit-time-delay=0
+
+[desktop/a11y/keyboard]
+bouncekeys-delay=300
+mousekeys-accel-time=300
+mousekeys-init-delay=300
+mousekeys-max-speed=10
+slowkeys-delay=300
+
+[desktop/a11y/mouse]
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-time=1.2
+
+[desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/linuxmint-wilma/aksenapati_blanket.jpg'
+
+[desktop/background/slideshow]
+delay=15
+image-source='xml:///usr/share/cinnamon-background-properties/linuxmint.xml'
+
+[desktop/interface]
+cursor-size=24
+cursor-theme='Bibata-Modern-Ice'
+gtk-theme='Mint-Y-Dark-Aqua'
+icon-theme='Papirus'
+text-scaling-factor=1.0
+
+[desktop/peripherals/mouse]
+accel-profile='flat'
+double-click=400
+drag-threshold=8
+speed=0.0
+
+[desktop/peripherals/touchpad]
+speed=0.62605042016806722
+
+[desktop/screensaver]
+lock-delay=uint32 60
+
+[desktop/session]
+idle-delay=uint32 3600
+
+[desktop/sound]
+event-sounds=false
+
+[desktop/wm/preferences]
+min-window-opacity=30
+
+[gestures]
+swipe-down-2='PUSH_TILE_DOWN::end'
+swipe-down-3='TOGGLE_OVERVIEW::end'
+swipe-down-4='VOLUME_DOWN::end'
+swipe-left-2='PUSH_TILE_LEFT::end'
+swipe-left-3='WORKSPACE_NEXT::end'
+swipe-left-4='WINDOW_WORKSPACE_PREVIOUS::end'
+swipe-right-2='PUSH_TILE_RIGHT::end'
+swipe-right-3='WORKSPACE_PREVIOUS::end'
+swipe-right-4='WINDOW_WORKSPACE_NEXT::end'
+swipe-up-2='PUSH_TILE_UP::end'
+swipe-up-3='TOGGLE_EXPO::end'
+swipe-up-4='VOLUME_UP::end'
+tap-3='MEDIA_PLAY_PAUSE::end'
+
+[launcher]
+check-frequency=300
+memory-limit=2048
+
+[muffin]
+draggable-border-width=10
+experimental-features=@as []
+
+[settings-daemon/plugins/power]
+button-power='shutdown'
+critical-battery-action='shutdown'
+lid-close-ac-action='nothing'
+lid-close-battery-action='suspend'
+sleep-display-ac=3600
+sleep-display-battery=3600
+sleep-inactive-ac-timeout=0
+sleep-inactive-battery-timeout=7200
+
+[settings-daemon/plugins/xsettings]
+antialiasing='rgba'
+hinting='slight'
+rgba-order='rgba'
+
+[theme]
+name='Orchidea'
