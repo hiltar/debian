@@ -1,7 +1,7 @@
 # debian12 & LMDE 6
 Tweaks and tips for Debian 12 & LMDE 6
 
-![Debian](https://media1.tenor.com/m/BcVGTaZaNccAAAAC/debian-linux.gif)\n ![LMDE 6](https://github.com/user-attachments/assets/5c3b397a-55a2-4895-9ac8-fce766706d05)
+![Debian](https://media1.tenor.com/m/BcVGTaZaNccAAAAC/debian-linux.gif)
 
 ---
 
