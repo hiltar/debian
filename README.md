@@ -68,10 +68,19 @@ HandleLidSwitchDocked=ignore
 
 # Other
 
-## Export & import gnome-terminal profile
+## Export & Import gnome-terminal profile
 
 ```
 dconf dump /org/gnome/terminal/legacy/profiles:/ > gnome-terminal-profiles.dconf
 dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
 rm gnome-terminal-profiles.dconf
+reboot
+```
+
+## Export & Import Cinnamon settings
+```
+dconf dump /org/cinnamon/ > cinnamon_settings.dconf
+dconf load /org/cinnamon/ < cinnamon_settings.dconf
+rm cinnamon_settings.dconf
+reboot
 ```
