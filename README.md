@@ -61,7 +61,7 @@ HandleLidSwitchExternalPower=ignore
 HandleLidSwitchDocked=ignore
 ```
 
-## Firefox by Mint has an issue with video playback, to be solved
+## Firefox by Mint has an issue with video playback, use Brave browser instead
 
 
 ---
