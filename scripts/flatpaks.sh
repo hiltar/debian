@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" -ne 0 ] ; then
   flatpak install flathub com.brave.Browser
   flatpak install flathub com.github.tchx84.Flatseal
   flatpak install flathub org.mozilla.firefox
