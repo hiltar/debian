@@ -22,3 +22,30 @@ tarmo@t480:~$ neofetch
                                                        
                                                        
 ```
+
+```
+tarmo@fedora:~$ fastfetch
+             .',;::::;,'.                 tarmo@fedora
+         .';:cccccccccccc:;,.             ------------
+      .;cccccccccccccccccccccc;.          OS: Fedora Linux 40 (Workstation Edition) x86_64
+    .:cccccccccccccccccccccccccc:.        Host: GTR
+  .;ccccccccccccc;.:dddl:.;ccccccc;.      Kernel: Linux 6.10.6-200.fc40.x86_64
+ .:ccccccccccccc;OWMKOOXMWd;ccccccc:.     Uptime: 3 hours, 32 mins
+.:ccccccccccccc;KMMc;cc;xMMc;ccccccc:.    Packages: 2253 (rpm), 6 (flatpak)
+,cccccccccccccc;MMM.;cc;;WW:;cccccccc,    Shell: bash 5.2.26
+:cccccccccccccc;MMM.;cccccccccccccccc:    Display (MSI MAG275R): 1920x1080 @ 144 Hz in 27″ [External]
+:ccccccc;oxOOOo;MMM000k.;cccccccccccc:    Display (MSI MAG274R): 1920x1080 @ 144 Hz in 27″ [External]
+cccccc;0MMKxdd:;MMMkddc.;cccccccccccc;    DE: GNOME 46.4
+ccccc;XMO';cccc;MMM.;cccccccccccccccc'    WM: Mutter (Wayland)
+ccccc;MMo;ccccc;MMW.;ccccccccccccccc;     WM Theme: catppuccin-frappe-blue-standard+default
+ccccc;0MNc.ccc.xMMd;ccccccccccccccc;      Theme: HighContrastInverse [GTK2/3/4]
+cccccc;dNMWXXXWM0:;cccccccccccccc:,       Icons: Papirus-Dark [GTK2/3/4]
+cccccccc;.:odl:.;cccccccccccccc:,.        Font: Cantarell (11pt) [GTK2/3/4]
+ccccccccccccccccccccccccccccc:'.          Cursor: Bibata-Modern-Ice (24px)
+:ccccccccccccccccccccccc:;,..             Terminal: GNOME Terminal 3.50.1
+ ':cccccccccccccccc::;,.                  Terminal Font: Monospace (12pt)
+                                          CPU: AMD Ryzen 9 5900HX (16) @ 4.68 GHz
+                                          GPU: AMD Radeon Vega Series / Radeon Vega Mobile Series [Integrated]
+                                          Memory: 3.49 GiB / 27.30 GiB (13%)
+
+```
