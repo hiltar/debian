@@ -1,5 +1,5 @@
 # debian12 & LMDE 6
-Tweaks and tips for Debian 12 & LMDE 6
+Tweaks and tips for Debian 12 & LMDE 6. Themes and settings for GNOME included.
 
 ![Debian](https://media1.tenor.com/m/BcVGTaZaNccAAAAC/debian-linux.gif)
 
