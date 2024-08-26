@@ -84,3 +84,11 @@ dconf load /org/cinnamon/ < cinnamon_settings.dconf
 rm cinnamon_settings.dconf
 reboot
 ```
+
+## Export & Import Gnome settings
+```
+dconf dump /org/gnome/ > gnome_settings.dconf
+dconf load /org/gnome/ < gnome_settings.dconf
+rm gnome_settings.dconf
+reboot
+```
