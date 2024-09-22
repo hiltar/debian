@@ -31,6 +31,7 @@ reboot
 ## Enable firewall
 
 ```
+sudo apt install ufw -y
 ufw status
 ufw enable
 ```
