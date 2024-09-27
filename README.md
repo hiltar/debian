@@ -50,6 +50,24 @@ reboot
 
 ---
 
+# Backports
+Enable backports repository:
+```
+nano /etc/apt/sources.list
+
+deb http://deb.debian.org/debian bookworm-backports main
+```
+
+`apt update`
+
+## Packages from backports
+```
+apt install -t bookworm-backports mesa-vulkan-drivers -y
+apt install -t bookworm-backports linux-image-amd64 -y
+```
+
+---
+
 # Issues
 
 ## Sleep loop while docked (Thunderbolt 3 & 4 docks)
