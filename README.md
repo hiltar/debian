@@ -64,6 +64,7 @@ deb http://deb.debian.org/debian bookworm-backports main
 ```
 apt install -t bookworm-backports mesa-vulkan-drivers -y
 apt install -t bookworm-backports linux-image-amd64 -y
+apt install -t bookworm-backports firmware-amd-graphics -y
 ```
 
 ---
