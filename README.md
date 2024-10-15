@@ -116,6 +116,17 @@ Anywhere                   ALLOW OUT   Anywhere on enx3ce1a1c0093a
 Anywhere (v6)              ALLOW OUT   Anywhere (v6) on enx3ce1a1c0093a
 ```
 
+`nmcli device status`
+```
+DEVICE           TYPE      STATE                   CONNECTION         
+enx3ce1a1c0093a  ethernet  connected               Wired connection 1 
+lo               loopback  connected (externally)  lo                 
+eno1             ethernet  unavailable             --                 
+enp2s0           ethernet  unavailable             --                 
+wlp3s0           wifi      unavailable             --
+```
+
+
 
 ---
 
