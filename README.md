@@ -1,5 +1,5 @@
-# debian12 & LMDE 6
-Tweaks and tips for Debian 12 & LMDE 6. Themes and settings for GNOME included.
+# debian12
+Tweaks and tips for Debian 12. Themes and settings for GNOME included.
 
 ![Debian](https://media1.tenor.com/m/BcVGTaZaNccAAAAC/debian-linux.gif)
 
@@ -36,16 +36,18 @@ ufw status
 ufw enable
 ```
 
-## Change swappiness
+## sysctl.conf
 
 ```
-cat /proc/sys/vm/swappiness
-# If swappiness is 60:
-
+### Change Swappiness
 nano /etc/sysctl.conf
-# Add this line to bottom of .conf file:
 vm.swappiness=10
 reboot
+
+### Increase max map count
+nano /etc/sysctl.conf
+vm.max_map_count=524288
+sysctl -p
 ```
 
 ---
