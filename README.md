@@ -118,6 +118,14 @@ Anywhere                   ALLOW OUT   Anywhere on enx3ce1a1c0093a
 Anywhere (v6)              ALLOW OUT   Anywhere (v6) on enx3ce1a1c0093a
 ```
 
+Add into interfaces file: `nano /etc/network/interfaces`
+```
+allow-hotplug eno1
+allow-hotplug enx3ce1a1c0093a
+iface eno1 inet dhcp
+iface enx3ce1a1c0093a inet dhcp
+```
+
 `nmcli device status`
 ```
 DEVICE           TYPE      STATE                   CONNECTION         
