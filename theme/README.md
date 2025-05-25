@@ -1,5 +1,5 @@
 ```
-tarmo@debian:~$
+tarmo@debian:~$ neofetch
        _,met$$$$$gg.          tarmo@debian 
     ,g$$$$$$$$$$$$$$$P.       ------------ 
   ,g$$P"     """Y$$.".        OS: Debian GNU/Linux 13 (trixie) x86_64 
