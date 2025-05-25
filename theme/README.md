@@ -1,4 +1,26 @@
 ```
+       _,met$$$$$gg.          tarmo@debian 
+    ,g$$$$$$$$$$$$$$$P.       ------------ 
+  ,g$$P"     """Y$$.".        OS: Debian GNU/Linux 13 (trixie) x86_64 
+ ,$$P'              `$$$.     Host: GTR 
+',$$P       ,ggs.     `$$b:   Kernel: 6.12.27-amd64 
+`d$$'     ,$P"'   .    $$$    Uptime: 1 hour, 18 mins 
+ $$P      d$'     ,    $$P    Packages: 2516 (dpkg), 25 (flatpak) 
+ $$:      $$.   -    ,d$$'    Shell: bash 5.2.37 
+ $$;      Y$b._   _,d$P'      Resolution: 1920x1080 
+ Y$$.    `.`"Y$$$$P"'         DE: GNOME 48.1 
+ `$$b      "-.__              WM: Mutter 
+  `Y$$                        WM Theme: Adwaita 
+   `Y$$.                      Theme: Adwaita [GTK2/3] 
+     `$$b.                    Icons: Papirus [GTK2/3] 
+       `Y$$b.                 Terminal: gnome-terminal 
+          `"Y$b._             CPU: AMD Ryzen 9 5900HX with Radeon Graphics (16) @ 4.680GHz 
+              `"""            GPU: AMD ATI Radeon Vega Series / Radeon Vega Mobile Series 
+                              Memory: 3531MiB / 27969MiB 
+
+```
+
+```
 tarmo@t480:~$ neofetch
 `.-::---..                     tarmo@t480 
       .:++++ooooosssoo:.       ---------- 
