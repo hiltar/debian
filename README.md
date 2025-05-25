@@ -1,7 +1,16 @@
-# debian12
-Tweaks and tips for Debian 12. Themes and settings for GNOME included.
+# debian
+Tweaks and tips for Debian. Themes and settings for GNOME included.
 
 ![Debian](https://media1.tenor.com/m/BcVGTaZaNccAAAAC/debian-linux.gif)
+
+---
+
+# Update to Debian 13 Trixie
+```
+sudo sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+sudo apt update
+sudo apt full-upgrade --autoremove
+```
 
 ---
 
