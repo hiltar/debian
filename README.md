@@ -5,6 +5,44 @@ Tweaks and tips for Debian. Themes and settings for GNOME included.
 
 ---
 
+# Installation guide - minimal
+
+## Flashing netinst iso
+Download a netinst iso from Debian: `https://cdimage.debian.org/cdimage/release/current/amd64/iso-cd/`, file called `debian-<version>-amd64-netinst.iso`   
+Flash the netinst iso into USB flash stick with `Fedora media writer` or similar.  
+
+## Installation
+Use `Graphical install` to install Debian  
+Deselect any desktop selection and select `standard system utilities`
+![DE selection](https://github.com/user-attachments/assets/6403e7ed-3f68-4a43-9f3a-bfe2a2df509c)
+
+After successful installation login as root  
+**NOTE: You may update to Debian 13 Trixie at this point** 
+```
+apt install sudo
+adduser <user> sudo # Change user
+
+sudo apt update
+sudo apt install gnome-core -y
+sudo apt purge ifupdown -y # Gnome uses Network Manager - Unnecessary package
+sudo shutdown -r now
+
+sudo nano /etc/NetworkManager/NetworkManager.conf
+
+[ifupdown]
+managed = true
+
+sudo shutdown -r now
+
+# Packages
+# minimal
+sudo apt install gnome-session nautilus gnome-terminal firefox-esr -y
+
+# Minimal with additional packages
+sudo apt install gnome-session nautilus gnome-terminal firefox-esr git wget curl flatpak gnome-software-plugin-flatpak fastfetch gnome-tweaks -y
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
 # Update to Debian 13 Trixie
 ```
 sudo sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
