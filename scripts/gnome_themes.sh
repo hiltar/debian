@@ -5,20 +5,13 @@ THEME_NAME="bibata-modern-ice"
 CURSOR_THEME_URL="https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz"
 
 # Download and extract the theme
-wget -O ~/themes/$THEME_NAME.tar.gz $CURSOR_THEME_URL
-tar -xvf ~/themes/$THEME_NAME.tar.gz -C ~/.themes
-rm -f ~/themes/$THEME_NAME.tar.gz
+wget -O /usr/share/themes/$THEME_NAME.tar.gz $CURSOR_THEME_URL
+tar -xvf /usr/share/themes/$THEME_NAME.tar.gz -C /usr/share/themes/
+rm -f /usr/share/themes/$THEME_NAME.tar.gz
 echo "Cursor theme installed"
 
-# Shell theme
-SHELL_THEME_URL="https://github.com/catppuccin/gtk/releases/download/v1.0.3/catppuccin-frappe-blue-standard+default.zip"
-SHELL_THEME_NAME="catppuccin-frappe-blue"
-wget -O ~/themes/$SHELL_THEME_NAME.tar.gz $SHELL_THEME_URL
-tar -xvf ~/themes/$SHELL_THEME_NAME.tar.gz -C ~/.themes
-rm -f ~/themes/$SHELL_THEME_NAME.tar.gz
-
 # Papirus icons
-sudo dnf install papirus-icon-theme
+sudo apk install papirus-icon-theme
 
 # dconf files
 wget -O ~/gnome_settings.dconf https://github.com/hiltar/debian12/blob/main/theme/gnome-settings-backup.conf
