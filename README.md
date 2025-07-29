@@ -65,6 +65,16 @@ systemd-analyze blame
 systemctl disable NetworkManager-wait-online.service
 ```
 
+## Better fonts
+
+```
+sudo nano /etc/environment
+
+FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
+
+sudo reboot
+```
+
 ## Improve battery life
 
 ```
@@ -129,61 +139,6 @@ nano /etc/systemd/logind.conf
 HandleLidSwitchExternalPower=ignore
 HandleLidSwitchDocked=ignore
 ```
-
-## Thunderbolt 3 dock ethernet stop working
-`nmcli device status`
-
-```
-DEVICE           TYPE      STATE                                    CONNECTION
-enx3ce1a1c0093a  ethernet  connecting (getting IP configuration)    Wired connection 1
-lo               loopback  connected (externally)                   lo
-eno1             ethernet  unavailable                              --
-enp2s0           ethernet  unavailable                              --
-wlp3s0           wifi      unavailable                              --
-```
-
-Check logs: `dmesg | grep enx3ce1a1c0093a`
-```
-[  462.038774] r8152 2-1.1.2:1.0 enx3ce1a1c0093a: Tx status -71
-[  466.011891] r8152 2-1.1.2:1.0 enx3ce1a1c0093a: Tx status -71
-[  466.025828] [UFW BLOCK] IN=enx3ce1a1c0093a OUT= MAC=01:00:5e:00:00:02:d0:c9:e3:9a:e2:20:08:00 SRC=192.168.68.1 DST=224.0.0.1 LEN=36 TOS=0x00 PREC=0x00 TTL=1 ID=12152 DF PROTO=2
-```
-
-Add allow rule for `enx3ce1a1c0093a`
-```
-sudo ufw allow out on enx3ce1a1c0093a
-sudo ufw reload
-sudo ufw status
-```
-
-```
-Status: active
-
-To                         Action      From
---                         ------      ----
-Anywhere                   ALLOW OUT   Anywhere on enx3ce1a1c0093a
-Anywhere (v6)              ALLOW OUT   Anywhere (v6) on enx3ce1a1c0093a
-```
-
-Add into interfaces file: `nano /etc/network/interfaces`
-```
-allow-hotplug eno1
-allow-hotplug enx3ce1a1c0093a
-iface eno1 inet dhcp
-iface enx3ce1a1c0093a inet dhcp
-```
-
-`nmcli device status`
-```
-DEVICE           TYPE      STATE                   CONNECTION         
-enx3ce1a1c0093a  ethernet  connected               Wired connection 1 
-lo               loopback  connected (externally)  lo                 
-eno1             ethernet  unavailable             --                 
-enp2s0           ethernet  unavailable             --                 
-wlp3s0           wifi      unavailable             --
-```
-
-
 
 ---
 
