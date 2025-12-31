@@ -39,7 +39,7 @@ sudo shutdown -r now
 sudo apt install gnome-session nautilus gnome-terminal firefox-esr -y
 
 # Minimal with additional packages
-sudo apt install gnome-session nautilus gnome-terminal firefox-esr git wget curl flatpak gnome-software-plugin-flatpak fastfetch gnome-tweaks -y
+sudo apt install gnome-session nautilus ptyxis firefox-esr git wget curl flatpak gnome-software-plugin-flatpak gnome-tweaks -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
