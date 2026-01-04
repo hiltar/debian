@@ -35,10 +35,6 @@ managed = true
 sudo shutdown -r now
 
 # Packages
-# minimal
-sudo apt install gnome-session nautilus gnome-terminal firefox-esr -y
-
-# Minimal with additional packages
 sudo apt install gnome-session nautilus ptyxis firefox-esr git wget curl flatpak gnome-software-plugin-flatpak gnome-tweaks -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
@@ -69,6 +65,7 @@ cryptroot UUID=<uuid> none luks,discard
 # initramfs
 update-initramfs -u -k all
 ```
+
 # Tweaks
 
 ## Faster boot time
