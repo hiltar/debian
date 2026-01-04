@@ -35,7 +35,7 @@ managed = true
 sudo shutdown -r now
 
 # Packages
-sudo apt install gnome-session nautilus ptyxis firefox-esr git wget curl flatpak gnome-software-plugin-flatpak gnome-tweaks -y
+sudo apt install gnome-session nautilus ptyxis firefox-esr fwupd git wget curl flatpak gnome-software-plugin-flatpak gnome-tweaks -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
