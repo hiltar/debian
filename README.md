@@ -50,8 +50,25 @@ sudo apt update
 sudo apt full-upgrade --autoremove
 ```
 
----
+# LUKS + TPM2 encryption
+```
+sudo apt install systemd-cryptsetup tpm2-tools clevis clevis-luks clevis-tpm2
 
+lsblk -f
+# nvme0n1p3 crypto_LUKS
+
+# Bind TPM2 to partition
+clevis luks bind -d /dev/nvme0n1p3 tpm2 '{"pcr_ids":"2,7"}'
+
+# Test TPM2
+cryptsetup luksClose cryptroot
+cryptsetup luksOpen /dev/nvme0n1p3 cryptroot
+
+# /etc/crypttab
+cryptroot UUID=<uuid> none luks,discard
+# initramfs
+update-initramfs -u -k all
+```
 # Tweaks
 
 ## Faster boot time
