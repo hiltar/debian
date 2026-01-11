@@ -128,16 +128,16 @@ Enable backports repository:
 ```
 nano /etc/apt/sources.list
 
-deb http://deb.debian.org/debian bookworm-backports main
+deb http://deb.debian.org/debian trixie-backports main
 ```
 
 `apt update`
 
 ## Packages from backports
 ```
-apt install -t bookworm-backports mesa-vulkan-drivers -y
-apt install -t bookworm-backports linux-image-amd64 -y
-apt install -t bookworm-backports firmware-amd-graphics -y
+apt install -t trixie-backports mesa-vulkan-drivers -y
+apt install -t trixie-backports linux-image-amd64 -y
+apt install -t trixie-backports firmware-amd-graphics -y
 ```
 
 ---
