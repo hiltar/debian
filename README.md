@@ -140,6 +140,56 @@ apt install -t trixie-backports linux-image-amd64 -y
 apt install -t trixie-backports firmware-amd-graphics -y
 ```
 
+## profile-sync-daemon
+```
+sudo apt install profile-sync-daemon
+mkdir -p ~/.config/psd
+nano ~/.config/psd/psd.conf 
+```
+```
+# List browsers to manage (space separated; firefox works for ESR too)
+BROWSERS=(firefox)
+USE_OVERLAYFS="yes"
+# SYNC=(15m)
+```
+`sudo visudo`
+```
+tarmo ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
+```
+```
+systemctl --user daemon-reload
+systemctl --user enable --now psd.service psd-resync.timer
+systemctl --user start psd.service
+```
+```
+psd p
+
+Profile-sync-daemon v6.50
+
+ systemd service:  active
+ resync-timer:  active
+ sync on sleep:  disabled
+ use overlayfs:  enabled
+
+Psd will manage the following per /home/tarmo/.config/psd/.psd.conf:
+
+ browser/psname:  firefox/firefox
+ owner/group id:  tarmo/1000
+ sync target:  /home/tarmo/.mozilla/firefox/tv0jtktb.default
+ tmpfs dir:  /run/user/1000/psd/tarmo-firefox-tv0jtktb.default
+ profile size:  4.0K
+ overlayfs size:  0
+ recovery dirs:  none
+
+ browser/psname:  firefox/firefox
+ owner/group id:  tarmo/1000
+ sync target:  /home/tarmo/.mozilla/firefox/z7xmraae.default-esr
+ tmpfs dir:  /run/user/1000/psd/tarmo-firefox-z7xmraae.default-esr
+ profile size:  176M
+ overlayfs size:  42M
+ recovery dirs:  none
+```
+
 ---
 
 # Issues
