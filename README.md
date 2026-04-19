@@ -37,6 +37,14 @@ sudo shutdown -r now
 # Packages
 sudo apt install gnome-session nautilus ptyxis firefox-esr fwupd git wget curl flatpak gnome-software-plugin-flatpak gnome-tweaks -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Shell Extensions
+sudo apt install libgnome-menu-3-0 gir1.2-gmenu-3.0 # For Arcmenu
+
+https://extensions.gnome.org/extension/615/appindicator-support/
+https://extensions.gnome.org/extension/3628/arcmenu/
+https://extensions.gnome.org/extension/1160/dash-to-panel/
+https://extensions.gnome.org/extension/5461/osd-volume-number/
 ```
 
 # Update to Debian 13 Trixie
@@ -44,26 +52,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
 sudo apt update
 sudo apt full-upgrade --autoremove
-```
-
-# LUKS + TPM2 encryption
-```
-sudo apt install systemd-cryptsetup tpm2-tools clevis clevis-luks clevis-tpm2
-
-lsblk -f
-# nvme0n1p3 crypto_LUKS
-
-# Bind TPM2 to partition
-clevis luks bind -d /dev/nvme0n1p3 tpm2 '{"pcr_ids":"2,7"}'
-
-# Test TPM2
-cryptsetup luksClose cryptroot
-cryptsetup luksOpen /dev/nvme0n1p3 cryptroot
-
-# /etc/crypttab
-cryptroot UUID=<uuid> none luks,discard
-# initramfs
-update-initramfs -u -k all
 ```
 
 # Tweaks
