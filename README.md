@@ -157,6 +157,7 @@ echo "deb [signed-by=/etc/apt/keyrings/morgwai-obs.gpg] http://download.opensuse
 sudo apt-get update
 sudo apt-get install ntsync-kernel-dkms
 
+# Use compatibility mode and Proton 10.X+
 # Launch option
 PROTON_USE_NTSYNC=1 %command%
 
