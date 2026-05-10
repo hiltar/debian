@@ -150,6 +150,20 @@ apt install -t trixie-backports linux-image-amd64 -y
 apt install -t trixie-backports firmware-amd-graphics -y
 ```
 
+## NTSync
+```
+sudo wget -O /etc/apt/keyrings/morgwai-obs.gpg https://build.opensuse.org/projects/home:morgwai/signing_keys/download?kind=gpg
+echo "deb [signed-by=/etc/apt/keyrings/morgwai-obs.gpg] http://download.opensuse.org/repositories/home:/morgwai:/ntsync/Debian_13 /" | sudo tee /etc/apt/sources.list.d/wine-ntsync.list
+sudo apt-get update
+sudo apt-get install ntsync-kernel-dkms
+
+# Launch option
+PROTON_USE_NTSYNC=1 %command%
+
+# Verify
+lsof /dev/ntsync
+```
+
 ## profile-sync-daemon
 ```
 sudo apt install profile-sync-daemon
